@@ -1,0 +1,38 @@
+<!doctype html>
+
+<title>Data Screen</title>
+<link rel="stylesheet" href="./stylesheets/base.css">
+
+<div class="box traffic">
+	<div id="traffic" class="count">
+		<div class="box-inner">
+			<h1 id="traffic-count"></h1>
+			<p>People currently on GOV.UK</p>
+		</div>
+	</div>
+</div>
+
+<div class="box searches">
+	<div class="box-inner">
+		<h1>Live searches on GOV.UK:</h1>
+		<ul id="search"></ul>
+	</div>
+</div>
+
+<script src="javascripts/vendor/jquery.min.js"></script>
+
+<script src="javascripts/search.js"></script>
+<script src="javascripts/traffic.js"></script>
+<script src="javascripts/manager.js"></script>
+<script>
+	if(typeof window.matrix === 'undefined'){ window.matrix = {}; }
+	
+	matrix.settings = {
+		authServer: '/token',
+		profileId: '67465768'
+	};
+	
+	$(function(){
+		matrix.manager.init();
+	});
+</script>
