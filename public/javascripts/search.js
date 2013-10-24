@@ -100,7 +100,8 @@
 			if(term){
 				search.$el.prepend('<li>'+$('<div>').text(term).html()+'</li>');
 				search.$el.find('li:gt(25)').remove();
-				root.setTimeout(search.displayResults, (search.nextRefresh - Date.now())/search.newTerms.length);
+				root.setTimeout(search.displayResults, 1000);
+				//root.setTimeout(search.displayResults, (search.nextRefresh - Date.now())/search.newTerms.length);
 			} else {
 				root.setTimeout(search.displayResults, 5e3);
 			}
