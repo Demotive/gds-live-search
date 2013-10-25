@@ -9,7 +9,7 @@ require 'active_support/core_ext/object'
 
 use Rack::Cache
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
-  username == 'govukpeeps' and password == 'wLMvyKyC'
+  username == 'govukpeeps' and password == 'govukp33ps'
 end
 
 set :public_folder, 'public'
